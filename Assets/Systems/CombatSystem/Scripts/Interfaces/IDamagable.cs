@@ -4,8 +4,7 @@ namespace CombatSystem
 {
     public interface IDamagable
     {
-        UnityEvent OnDamaged { get; }
-
+        UnityEvent<int> OnDamaged { get; }
     }
 }
 

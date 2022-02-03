@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using CombatSystem;
 using UnityEngine;
 using UnityEngine.Events;
@@ -13,6 +11,13 @@ public class HealthWithLimit : MonoBehaviour, IHaveHealth
     [SerializeField]UnityEvent onHealthChanged;
     public UnityEvent OnHealthChanged => onHealthChanged;
 
+    [SerializeField]UnityEvent onHealthBelowZero;
+    public UnityEvent OnHealthBelowZero => onHealthBelowZero;
+
+    void Awake()
+    {
+        SetHealth(maxValue);
+    }
 
     public void ModifyHealth(int value)
     {
@@ -23,8 +28,10 @@ public class HealthWithLimit : MonoBehaviour, IHaveHealth
     {
         var oldValue = Health;
         Health = Mathf.Clamp(health,minValue,maxValue);
-        if(oldValue!=health)
+        if(oldValue!= Health)
             OnHealthChanged?.Invoke();
+        if (Health<=0)
+            OnHealthBelowZero?.Invoke();
     }
 
 }

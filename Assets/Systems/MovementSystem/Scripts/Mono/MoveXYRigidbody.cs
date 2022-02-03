@@ -3,14 +3,11 @@ using System.Collections.Generic;
 using MovementSystem;
 using UnityEngine;
 
-public class Move2DTransform : MonoBehaviour,ICanMove2D
+public class MoveXYRigidbody : MonoBehaviour, ICanMove2D
 {
-    [SerializeField]float horizontalSpeed;
-    [SerializeField]float verticalSpeed;
+    public float HorizontalSpeed => throw new System.NotImplementedException();
 
-    public float HorizontalSpeed => horizontalSpeed;
-
-    public float VerticalSpeed => verticalSpeed;
+    public float VerticalSpeed => throw new System.NotImplementedException();
 
     public void MoveDown()
     {
@@ -32,15 +29,4 @@ public class Move2DTransform : MonoBehaviour,ICanMove2D
         throw new System.NotImplementedException();
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

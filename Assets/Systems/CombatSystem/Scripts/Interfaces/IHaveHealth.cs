@@ -5,6 +5,7 @@ namespace CombatSystem
     public interface IHaveHealth
     {
         UnityEvent OnHealthChanged { get; }
+        UnityEvent OnHealthBelowZero { get; }
 
         int Health { get; }
 
