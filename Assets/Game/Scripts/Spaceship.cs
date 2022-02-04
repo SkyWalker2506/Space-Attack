@@ -33,14 +33,15 @@ public class Spaceship : MonoBehaviour
             Debug.Log("No damagable", gameObject);
         else
             damagable.OnDamaged.AddListener(GetDamaged);
-        haveHealth = GetComponent<IHaveHealth>();
-        if (haveHealth == null)
-            Debug.Log("No haveHealth", gameObject);
-        else
-            haveHealth.OnHealthBelowZero.AddListener(destroyable.GetDestroyed);
         destroyable = GetComponent<IDestroyable>();
         if (destroyable == null)
             Debug.Log("No destroyable", gameObject);
+        haveHealth = GetComponent<IHaveHealth>();
+        if (haveHealth == null)
+            Debug.Log("No haveHealth", gameObject);
+        else if(destroyable != null)
+            haveHealth.OnHealthBelowZero.AddListener(destroyable.GetDestroyed);
+
         weapon = GetComponent<IWeapon>();
         if (weapon == null)
             Debug.Log("No weapon", gameObject);
