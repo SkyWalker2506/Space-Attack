@@ -1,12 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
+using PoolSystem;
 using UnityEngine;
 
 namespace CombatSystem
 {
     public class ProjectileThrowerWithPool : MonoBehaviour, IWeapon
     {
-        [SerializeField]Pool projectilePool;
+        [SerializeField] Pool projectilePool;
         public void Attack()
         {
 
