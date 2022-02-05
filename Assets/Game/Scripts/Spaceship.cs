@@ -18,7 +18,7 @@ public class Spaceship : MonoBehaviour
     IInput moveDownInput;
     IInput attackInput;
 
-    private void Awake()
+    void Awake()
     {
         InitializeInterfaces();
     }
@@ -55,35 +55,27 @@ public class Spaceship : MonoBehaviour
 
     public void SetMoveRightInput(IInput input)
     {
-        SetInput(moveRightInput, input, canMove2D.MoveRight);
+        InputUtility.SetInput(moveRightInput, input, canMove2D.MoveRight);
     }
 
     public void SetMoveLeftInput(IInput input)
     {
-        SetInput(moveLeftInput, input, canMove2D.MoveLeft);
+        InputUtility.SetInput(moveLeftInput, input, canMove2D.MoveLeft);
     }
 
     public void SetMoveUpInput(IInput input)
     {
-        SetInput(moveUpInput, input, canMove2D.MoveUp);
+        InputUtility.SetInput(moveUpInput, input, canMove2D.MoveUp);
     }
 
     public void SetMoveDownInput(IInput input)
     {
-        SetInput(moveDownInput, input, canMove2D.MoveDown);
+        InputUtility.SetInput(moveDownInput, input, canMove2D.MoveDown);
     }
 
     public void SetAttackInput(IInput input)
     {
-        SetInput(attackInput, input, weapon.Attack);
-    }
-
-    void SetInput(IInput inputToSet, IInput input, UnityAction action)
-    {
-        if (inputToSet != null)
-            inputToSet.OnInputCalled.RemoveListener(action);
-        inputToSet = input;
-        inputToSet.OnInputCalled.AddListener(action);
+        InputUtility.SetInput(attackInput, input, weapon.Attack);
     }
 
 }

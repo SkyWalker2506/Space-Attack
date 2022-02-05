@@ -5,5 +5,7 @@ namespace InputSystem
     public interface IInput  
     {
         UnityEvent OnInputCalled { get; }
+
+        void CallInput();
     }
 }

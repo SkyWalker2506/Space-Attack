@@ -3,7 +3,6 @@ using UnityEngine.Events;
 
 namespace CombatSystem
 {
-
     public class Destroyable : MonoBehaviour, IDestroyable
     {
         [SerializeField] UnityEvent onDestroyed;
