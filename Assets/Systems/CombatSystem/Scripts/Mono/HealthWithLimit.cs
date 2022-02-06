@@ -7,8 +7,9 @@ namespace CombatSystem
     {
         [SerializeField] int minValue; 
         [SerializeField] int maxValue; 
-        public int Health { get; private set; }
-
+        [SerializeField] int currentHealth;
+        public int Health { get { return currentHealth; } set { currentHealth = value; } } 
+     
         [SerializeField]UnityEvent onHealthChanged;
         public UnityEvent OnHealthChanged => onHealthChanged;
 

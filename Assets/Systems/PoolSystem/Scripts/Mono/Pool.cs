@@ -66,9 +66,11 @@ namespace PoolSystem
             var poolObject = DeactivePoolObjects[0];
             DeactivePoolObjects.Remove(poolObject);
             ActivePoolObjects.Add(poolObject);
-            poolObject.OnTakeFromPool();
+            poolObject.OnTakenFromPool();
             poolObject.Transform.parent = null;
             return poolObject;
         }
+
+
     }
 }

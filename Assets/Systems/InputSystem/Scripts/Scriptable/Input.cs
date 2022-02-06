@@ -3,13 +3,11 @@ using UnityEngine.Events;
 
 namespace InputSystem
 {
-    [CreateAssetMenu(menuName = "InputSystem/ScritpableInput")]
-    public class ScritpableInput : ScriptableObject, IInput
+    public class Input : IInput
     {
-        [SerializeField] UnityEvent onInputCalled;
+        UnityEvent onInputCalled = new UnityEvent();
         public UnityEvent OnInputCalled => onInputCalled;
 
-        [ContextMenu("Call Input")]
         public void CallInput()
         {
             OnInputCalled?.Invoke();

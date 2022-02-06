@@ -21,6 +21,7 @@ namespace MovementSystem
 
         protected void Move(Vector3 value)
         {
+            if (gameObject.activeSelf == false) return;
             transform.position += value * Time.deltaTime;
         }
     }

@@ -4,7 +4,7 @@ namespace InputSystem
 {
     public class ScritpableInputSetter : InputSetterBase
     {
-        [SerializeField] ScritpableInput scritpableInput;
+        [SerializeField] ScriptableInput scritpableInput;
         public override IInput Input => scritpableInput;
     }
 }

@@ -2,7 +2,8 @@
 
 namespace InputSystem
 {
-    public interface InputSetter
+
+    public interface IInputSetter
     {
         IInput Input { get; }
         UnityEvent<IInput> InputSetterEvent { get; }

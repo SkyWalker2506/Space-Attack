@@ -1,13 +1,12 @@
-﻿using InputSystem;
+﻿using CombatSystem;
+using InputSystem;
 using MovementSystem;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class Bullet : MonoBehaviour
 {
     ICanMove2D canMove2D;
-    IInput moveInput;
+    ICanDamage ICanDamage;
 
     private void Awake()
     {
@@ -21,9 +20,10 @@ public class Bullet : MonoBehaviour
             Debug.Log("No canMove2D", gameObject);
     }
 
-    public void SetMoveInput(IInput input)
+    void Update()
     {
-        InputUtility.SetInput(moveInput, input, canMove2D.MoveDown);
+        canMove2D.MoveUp();
     }
+
 
 }

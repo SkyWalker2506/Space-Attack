@@ -14,6 +14,7 @@ namespace CombatSystem
         [ContextMenu("Attack")]
         public void Attack()
         {
+            if (gameObject.activeSelf == false) return;
             onAttack?.Invoke();
             var projectile=projectilePool.Pool.TakeFromPool();
             projectile.Transform.position = weaponTip.position;

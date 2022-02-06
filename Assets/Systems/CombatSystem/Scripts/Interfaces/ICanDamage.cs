@@ -7,11 +7,12 @@ namespace CombatSystem
 {
     public interface ICanDamage
     {
-        UnityEvent OnApplyDamage { get; }
+        UnityEvent<int> OnApplyDamage { get; }
         int Damage { get; }
 
         void SetDamage(int damage);
-        void ApplyDamage();
-
+        void TryApplyDamage(GameObject damagable);
+        void ApplyDamage(IDamagable damagable);
     }
+
 }

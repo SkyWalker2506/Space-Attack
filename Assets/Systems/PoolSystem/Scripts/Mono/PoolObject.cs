@@ -6,6 +6,7 @@ namespace PoolSystem
     public class PoolObject : MonoBehaviour, IPoolObject
     {
         public IPool Pool { get; set; }
+        public PoolObjectState PoolObjectState { get; set; }
         [SerializeField]UnityEvent onObjectCreated;
         public Transform Transform => transform;
         public UnityEvent OnObjectCreated => onObjectCreated;
@@ -21,16 +22,19 @@ namespace PoolSystem
         {
             var poolObject= Instantiate(gameObject).GetComponent<IPoolObject>();
             onObjectCreated?.Invoke();
+            PoolObjectState = PoolObjectState.Created;
             return poolObject;
         }
 
-        public void OnTakeFromPool()
+        public void OnTakenFromPool()
         {
+            PoolObjectState = PoolObjectState.TakenFromPool;
             OnObjectTaken?.Invoke();
         }
 
         public void OnReturnToPool()
         {
+            PoolObjectState = PoolObjectState.ReturnToPool;
             OnObjectReturn?.Invoke();
         }
 

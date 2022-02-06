@@ -9,7 +9,8 @@ namespace InputSystem
             if (inputToSet != null)
                 inputToSet.OnInputCalled.RemoveListener(action);
             inputToSet = input;
-            inputToSet.OnInputCalled.AddListener(action);
+            if (inputToSet != null)
+                inputToSet.OnInputCalled.AddListener(action);
         }
     }
 }

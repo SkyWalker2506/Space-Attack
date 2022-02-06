@@ -4,7 +4,7 @@ using UnityEngine.Events;
 namespace InputSystem
 {
 
-    public class InputSetterBase : MonoBehaviour, InputSetter
+    public class InputSetterBase : MonoBehaviour, IInputSetter
     {
         public virtual IInput Input { get; }
 

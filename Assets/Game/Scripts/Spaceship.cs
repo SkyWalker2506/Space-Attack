@@ -23,6 +23,15 @@ public class Spaceship : MonoBehaviour
         InitializeInterfaces();
     }
 
+    private void OnDisable()
+    {
+        SetMoveRightInput(null);
+        SetMoveLeftInput(null);
+        SetMoveUpInput(null);
+        SetMoveDownInput(null);
+        SetAttackInput(null);
+    }
+
     void InitializeInterfaces()
     {
         canMove2D = GetComponent<ICanMove2D>();

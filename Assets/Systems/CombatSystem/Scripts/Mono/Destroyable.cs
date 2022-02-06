@@ -11,7 +11,6 @@ namespace CombatSystem
         public void GetDestroyed()
         {
             OnDestroyed?.Invoke();
-            throw new System.NotImplementedException();
         }
     }
 }
