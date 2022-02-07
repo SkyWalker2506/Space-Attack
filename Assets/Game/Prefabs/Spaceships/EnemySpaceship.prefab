@@ -33,9 +33,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 280056377815363787, guid: d12153c4b5c321c4aaa3eda6004fa8cc, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1434521648537962533, guid: d12153c4b5c321c4aaa3eda6004fa8cc, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2472560237373682475, guid: d12153c4b5c321c4aaa3eda6004fa8cc, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2635370174629382967, guid: d12153c4b5c321c4aaa3eda6004fa8cc, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3699950255084735120, guid: d12153c4b5c321c4aaa3eda6004fa8cc, type: 3}
       propertyPath: m_Name
       value: EnemySpaceship
+      objectReference: {fileID: 0}
+    - target: {fileID: 3699950255084735120, guid: d12153c4b5c321c4aaa3eda6004fa8cc, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3699950255084735121, guid: d12153c4b5c321c4aaa3eda6004fa8cc, type: 3}
       propertyPath: verticalSpeed
@@ -100,6 +120,14 @@ PrefabInstance:
     - target: {fileID: 5816127793929683357, guid: d12153c4b5c321c4aaa3eda6004fa8cc, type: 3}
       propertyPath: horizontalSpeed
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7792109303509135170, guid: d12153c4b5c321c4aaa3eda6004fa8cc, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8010374609250413006, guid: d12153c4b5c321c4aaa3eda6004fa8cc, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8810314017813510397, guid: d12153c4b5c321c4aaa3eda6004fa8cc, type: 3}
       propertyPath: m_Materials.Array.data[0]
