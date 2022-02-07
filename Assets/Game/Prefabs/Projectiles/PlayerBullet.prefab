@@ -1,5 +1,61 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &3305308371326813969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2661214528780880471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24833b22e3831a548b33344c8a4dea11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onAbilityActivated:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5009444271547823753}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onAbilityDeactivated:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5009444271547823753}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  scriptableAbility: {fileID: 11400000, guid: 326a6cf0f6893d3459a03dece0f29659, type: 2}
+--- !u!114 &5463269999037467348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2661214528780880471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea91c1eb97798894c838f0e4d4c724ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  undestructableBulletAbility: {fileID: 11400000, guid: 326a6cf0f6893d3459a03dece0f29659, type: 2}
 --- !u!1001 &202655801536742489
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -67,5 +123,22 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -7156461842768226351, guid: b9063173ca35e0e40a1f82fd49a77c76, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b9063173ca35e0e40a1f82fd49a77c76, type: 3}
+--- !u!1 &2661214528780880471 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2747603567313604110, guid: b9063173ca35e0e40a1f82fd49a77c76, type: 3}
+  m_PrefabInstance: {fileID: 202655801536742489}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5009444271547823753 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5137170553936556752, guid: b9063173ca35e0e40a1f82fd49a77c76, type: 3}
+  m_PrefabInstance: {fileID: 202655801536742489}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2661214528780880471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67709038908808d4c857b2fc33ed4611, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -9,13 +9,14 @@ namespace CombatSystem
         UnityEvent<int> onDamaged;
         public UnityEvent<int> OnDamaged => onDamaged;
 
-        private void Awake()
+        private void Start()
         {
             CombatUtility.DamagableDictionary.Add(gameObject, this);
         }
 
         public void Damage(int value)
         {
+            if (!enabled) return;
             OnDamaged?.Invoke(value);
         }
     }

@@ -1,19 +1,17 @@
-﻿using CombatSystem;
-using InputSystem;
+﻿using InputSystem;
 using MovementSystem;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
     ICanMove2D canMove2D;
-    ICanDamage ICanDamage;
 
-    private void Awake()
+    void Awake()
     {
-        InitializeInterfaces();
+        Initialize();
     }
 
-    void InitializeInterfaces()
+    protected virtual void Initialize()
     {
         canMove2D = GetComponent<ICanMove2D>();
         if (canMove2D == null)

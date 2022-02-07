@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5807828262657483062, guid: 6bf0f11cf36a94342990265485c593d9, type: 3}
+      propertyPath: poolObjectPrefab
+      value: 
+      objectReference: {fileID: 1801715020199766865, guid: be87c99051621804ab4236a06dadee1f, type: 3}
     - target: {fileID: 6553307746246968094, guid: 6bf0f11cf36a94342990265485c593d9, type: 3}
       propertyPath: m_Name
       value: PlayerBulletPool
